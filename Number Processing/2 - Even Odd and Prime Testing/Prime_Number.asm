@@ -25,8 +25,8 @@ main proc
     
     ; chcking for others
     ;mov cx, 0       ; 
-    mov cl, n
-    dec cl   
+    mov cl, n	; cl = 8
+    dec cl   ; cl = 7
     myloop:
         mov al, n
         mov ah, 0

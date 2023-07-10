@@ -13,7 +13,7 @@ main proc
         mov ah, 1
         int 21h
         
-        cmp al, 0dh
+        cmp al, 0dh ; input is enter button
         je output
                    
         cmp al, 'A'
