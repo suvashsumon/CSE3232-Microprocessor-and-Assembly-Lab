@@ -23,7 +23,7 @@ MAIN PROC
         CMP AL,0DH
         JE END_INPUT
         
-        PUSH AX
+        PUSH AX ; stack 16-bit howai ax push kora lagbe
         INC CX
         JMP INPUT
     END_INPUT:
@@ -35,7 +35,7 @@ MAIN PROC
     INT 21H
     
     CALL NEW_LINE
-    JCXZ EXIT   ;if cx=0 then control transfer to EXIT
+    JCXZ EXIT   ;if cx=0, means input size is 0, then control transfer to EXIT
     
     OUTPUT: 
         POP DX

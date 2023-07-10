@@ -48,11 +48,11 @@ MAIN PROC
             CMP CX, MAX
             JG UPDATE   
             INC SI
-            MOV CX, 1
+            MOV CX, 1 ; again cx = 1 kora holo
             JMP CHECK
             
             UPDATE:
-                MOV MAX, CX
+                MOV MAX, CX ; max update kora holo
                 MOV BX, SI
                 SUB BX, CX
                 MOV INDEX, BX  

@@ -27,14 +27,14 @@ main proc
         loopi:
             mov di, si
             mov al, arr[si]
-            cmp al, '$'
+            cmp al, '$' ; is we reached to end?
             je output
             
             loopj:
                 inc di
                 mov al, arr[di]  ; arr[j], di->j
                 mov ah, arr[si]  ; arr[i], si->i
-                cmp al, '$'
+                cmp al, '$' ; is we reached to end?
                 je endloopj
                 
                 cmp ah, al  ; for acending

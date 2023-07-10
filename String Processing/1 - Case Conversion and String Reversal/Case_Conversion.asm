@@ -16,29 +16,29 @@ main proc
         cmp al, 0dh ; input is enter button
         je output
                    
-        cmp al, 'A'
+        cmp al, 'A' ; if al<A ?
         jl spacialchar
-        cmp al, 'Z'
+        cmp al, 'Z' ; if al>Z ?
         jl capital
-        cmp al, 'a'
+        cmp al, 'a' ; if al<a ?
         jl spacialchar
-        cmp al, 'z'
+        cmp al, 'z' ; if al>z ?
         jl lower
         jmp spacialchar
         
         spacialchar:
-            mov str[si], al
+            mov str[si], al ; input tai string e save korbo
             inc si
             jmp input
         
         capital:
-            add al, 32
+            add al, 32 ; 32 add kore upppercase kora holo
             mov str[si], al
             inc si
             jmp input
         
         lower:
-            sub al, 32
+            sub al, 32 ; 32 biyog kore lowercase kora holo
             mov str[si], al
             inc si
             jmp input
